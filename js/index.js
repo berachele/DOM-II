@@ -37,15 +37,27 @@ document.querySelector('a:nth-of-type(2)').addEventListener('mouseup', (e) => {
 })
 
 //offline
-window.addEventListener('offline', (e) => {
+window.addEventListener('offline', () => {
     console.log('I am OFFLINE')
     alert('I am OFFLINE')
 })
 
-//9
+//copy
+document.addEventListener('copy', (event)=> {
+    console.log('someone has copied some text!')
+    event.target.style.color = 'white'
+})
 
+//paste
+document.querySelector('.img-content:nth-of-type(1) img').addEventListener('paste', (event)=> {
+    console.log('this text was selected')
+    event.target.src = 'https://images.unsplash.com/photo-1482446439224-59276c41a5fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+})
 
-//10
+document.querySelector('.img-content:nth-of-type(2) img').addEventListener('paste', (event)=> {
+    console.log('this text was selected')
+    event.target.src = 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+})
 
 //  Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
 //   Nest two similar events somewhere in the site and prevent the event propagation properly
