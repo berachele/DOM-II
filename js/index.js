@@ -1,103 +1,49 @@
-// Your code goes here
-console.log('something else');
-
-// homeLink.addEventListener(
-//     'click', () => {
-//         //function when link is clicked
-//         console.log('the link got clicked');
-//     }
-// )
-// //pass two arguments:
-// //string with name of the event ('click')
-// //callback function
-
-// document.querySelector('nav').addEventListener('click', () => {
-//     console.log('nav got clicked!!');
-// })
-
-// //attach a 'click' event listener to the header element
-// //console.log
-// document.querySelector('.main-navigation').addEventListener('click', ()=>{
-//     console.log('the header was clicked-woot!');
-// })
-
-// document.body.addEventListener('click', (stuff) => {
-//     console.log(stuff);
-//     console.log('the body of the page got clicked');
-// })
-
-//can also do this below for cleaner and DRYer code
-// function clickEventHandler(event) {
-//     event.preventDefault()
-//     console.log(event.type + '!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-//     console.log(event.target)
-//     console.log(event.currentTarget);
-
-//     //you can grab ANY element in the DOM
-//     //you can do ANYTHING you want with it
-//     //you can create new elements and attch them to the DOM
-//     //you can destroy any part of the website
-//     //you can trigger network requests to sent data to the server
-//     //animations
-//     //analytics
-//   }
-
-//   document.querySelector('a').addEventListener('click', clickEventHandler)
-//   document.querySelector('nav').addEventListener('click', clickEventHandler)
-//   document.querySelector('header').addEventListener('click', clickEventHandler)
-//   document.body.addEventListener('click', clickEventHandler)
-//   document.addEventListener('click', clickEventHandler)
-//   window.addEventListener('click', clickEventHandler)
-
-
-
 //   Using your index.js file, create 10 unique event listeners. using your creativity to make the Fun Bus site more interactive. Here are some unique events you could try to use:
+
 //   mouseover
 document.querySelector('h1').addEventListener('mouseover', (event) => {
     event.target.style.color = '#FF4500';
 })
+
+//mouseout
 document.querySelector('h1').addEventListener('mouseout', (event) => {
     event.target.style.color = 'black';
 })
 
-// //   keydown
-// document.querySelector().addEventListener('keydown', () => {})
+//mouseenter
+document.querySelector('.intro img').addEventListener('mouseenter', (event) => {
+    event.target.src = 'https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80';
+})
 
-// //   wheel
-// document.querySelector().addEventListener('wheel', (event) => {
+//mouseleave
+document.querySelector('.intro img').addEventListener('mouseleave', (event) => {
+    event.target.src = 'http://127.0.0.1:8080/img/fun-bus.jpg';
+})
 
-// })
+//dblclick
+document.querySelector('footer').addEventListener('dblclick', (e) => {
+    e.target.style.backgroundColor = "#17A2B8"
+    e.target.style.color = "#FFEBCD"
+})
 
-// //   drag / drop
-// document.querySelector().addEventListener('drag', () => {})
-// document.querySelector().addEventListener('drop', () => {})
+//mousedown
+document.querySelector('a').addEventListener('mousedown', (e) => {
+    e.target.style.fontSize = '2rem'
+})
 
-// //   load
-// document.querySelector().addEventListener('load', () => {})
+//mouseup
+document.querySelector('a:nth-of-type(2)').addEventListener('mouseup', (e) => {
+    e.target.style.fontSize = '2.3rem'
+})
 
-
-// //   focus
-// document.querySelector().addEventListener('focus', () => {})
-
-
-// //   resize
-// document.querySelector().addEventListener('resize', () => {})
-
-
-// //   scroll
-document.querySelector().addEventListener('scroll', () => {
-
+//offline
+window.addEventListener('offline', (e) => {
+    console.log('I am OFFLINE')
+    alert('I am OFFLINE')
 })
 
 
-// //   select
-// document.querySelector().addEventListener('select', () => {})
 
-
-//   dblclick
-document.querySelectorAll('nav a').addEventListener('dblclick', (link) => {
-    Array
-})
 
 
 //  Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
