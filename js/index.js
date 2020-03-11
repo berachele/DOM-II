@@ -1,4 +1,5 @@
 //   Using your index.js file, create 10 unique event listeners. using your creativity to make the Fun Bus site more interactive. Here are some unique events you could try to use:
+//  Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
 
 //   mouseover
 document.querySelector('h1').addEventListener('mouseover', (event) => {
@@ -59,7 +60,20 @@ document.querySelector('.img-content:nth-of-type(2) img').addEventListener('past
     event.target.src = 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 })
 
-//  Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
 //   Nest two similar events somewhere in the site and prevent the event propagation properly
+function clickEventHandler(event) {
+    console.log(event.type + ' <--- This is the event type')
+    console.log(event.target)
+    console.log(event.currentTarget);
+    // event.stopPropagation()
+    //uncommenting above will stop propagation correctly.
+  }
 
- //   Stop the navigation items from refreshing the page by using preventDefault()
+  document.querySelector('.content-destination img').addEventListener('click', clickEventHandler)
+  document.querySelector('.content-destination').addEventListener('click', clickEventHandler)
+
+//   Stop the navigation items from refreshing the page by using preventDefault()
+
+document.querySelector('a').addEventListener('click', (event) =>{
+event.preventDefault()
+})
